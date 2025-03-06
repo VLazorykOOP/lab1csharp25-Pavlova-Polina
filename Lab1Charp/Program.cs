@@ -1,16 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
- static void task1()
+static void Task1()
 {
-    Console.WriteLine("Task1 !");
-    Console.Write("s= ");
-    string? str = Console.ReadLine();
-    float s = 0; 
-    if (str != null) s = float.Parse(str);
-    double p = 4 * Math.Sqrt(s);
-    Console.WriteLine("p=" + p);
+    Console.WriteLine("Завдання 1: Обчислення ребра куба за об'ємом.");
+    Console.Write("Введіть об'єм куба (v): ");
+    double v = Convert.ToDouble(Console.ReadLine());
 
+    if (v <= 0)
+    {
+        Console.WriteLine("Об'єм має бути додатнім числом!");
+        return;
+    }
+
+    double edge = Math.Pow(v, 1.0 / 3.0); // Обчислюємо ребро: edge = v^(1/3)
+    Console.WriteLine($"Ребро куба: {edge:F2}");
 }
-Console.WriteLine("Lab 1 !");
-task1();
-// continue ...
